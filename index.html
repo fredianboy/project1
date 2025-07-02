@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">P
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pharmacy Ward Stock Reorder Form</title>
+    <link href="page1.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <h1>Pharmacy Ward Stock Reorder Form</h1>
+    <h2>Inventory: LB - Endoscopy</h2>
+
+    <form onsubmit="return validateForm();">
+        <table>
+            <thead>
+                <tr>
+                    <th>MNEMONIC</th>
+                    <th>LOCATION</th>
+                    <th>MEDICATION GENERIC NAME</th>
+                    <th>PAR</th>
+                    <th>PREVIOUS DATE ORDERED <br>PREVIOUS AMOUNT ORDERED</th>
+                    <th>ORDER NOW</th>
+                    <th>AMOUNT</th>
+                </tr>
+            </thead>
+
+
+            <tbody>
+
+
+                <td colspan="7" class="medsType">INTERNAL LIQUIDS</td>
+
+                <tr>
+                    <td class="mnemonic">INF4040S01</td>
+                    <td class="loc">-</td>
+                    <td class="medsName">INFACOL 40mg/mL Oral Suspensions 55 mL</td>
+                    <td class="PAR">20</td>
+                    <td class="prevData"></td>
+                    <td class="checkbox-cell">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="item1" onchange="toggleInput(this)">
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                     <td><input type="number" name="qty1" readonly></td>
+                </tr>
+
+                <tr>
+                    <td colspan="7"></td>
+                </tr>
+
+                <td colspan="7" class="medsType">INTERNAL LIQUIDS</td>
+
+                <tr>
+                    <td class="mnemonic">ADR1I</td>
+                    <td class="loc">-</td>
+                    <td class="medsName">ADRENALINE 1mg/ml (1:1000) Ampoules</td>
+                    <td class="PAR">30</td>
+                    <td class="prevData"></td>
+                    <td class="checkbox-cell">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="item2" onchange="toggleInput(this)">
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                     <td><input type="number" name="qty2" readonly></td>
+                </tr>
+
+
+                <tr>
+                    <td class="mnemonic">ADR10I1</td>
+                    <td class="loc">-</td>
+                    <td class="medsName">ADRENALINE 1mg/10mL (1:10,000) Ampoules</td>
+                    <td class="PAR">50</td>
+                    <td class="prevData"></td>
+                    <td class="checkbox-cell">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="item3" onchange="toggleInput(this)">
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                     <td><input type="number" name="qty3" readonly></td>
+                </tr>
+
+
+                <tr>
+                    <td class="mnemonic">AMO500I1</td>
+                    <td class="loc">-</td>
+                    <td class="medsName">AMOXICILLIN 500mg Vials</td>
+                    <td class="PAR">10</td>
+                    <td class="prevData"></td>
+                    <td class="checkbox-cell">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="item4" onchange="toggleInput(this)">
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                     <td><input type="number" name="qty4" readonly></td>
+                </tr>
+
+
+                <tr>
+                    <td class="mnemonic">ATR600I</td>
+                    <td class="loc">-</td>
+                    <td class="medsName">ATROPINE SULPHATE 600 micrograms/mL Ampoules</td>
+                    <td class="PAR">20</td>
+                    <td class="prevData"></td>
+                    <td class="checkbox-cell">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="item5" onchange="toggleInput(this)">
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                     <td><input type="number" name="qty5" readonly></td>
+                </tr>
+
+                <!-- Add more items below following the same structure -->
+
+
+
+
+            </tbody>
+        </table>
+
+        <button type="submit" class="submit-btn">Submit Order</button>
+    </form>
+    <script src="page1.js"></script>
+</body>
+
+</html>
